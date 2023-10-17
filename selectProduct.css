@@ -1,0 +1,59 @@
+.make-flex{
+    display: flex;
+}
+
+body{
+    margin: 25px 100px;
+}
+
+main{
+    margin: 20px 100px;
+}
+
+.product-details{
+    padding: 35px 65px;
+}
+
+.quantity-up , .quantity-down{
+    border: 0px;
+    background-color: #59ab6e;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+}
+
+.buy-options > a{
+    width: 100%;
+    background-color: #59ab6e;
+    border: 0px;
+    margin: 40px 10px;
+    padding: 15px 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+
+.card-img{
+    justify-content: center;
+}
+
+.reviews-list{
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-rows: auto;
+    gap: 25px;
+}
+
+.review{
+    margin: 40px 65px;
+}
+ 
+.reviewer-img{
+    border-radius: 50%;
+}
+
+.review-content{
+    padding: 0px 40px;
+}

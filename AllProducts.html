@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="AllProducts.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+
+    </div>
+<main>
+    <div class="make-flex content">
+        <div class="categories">
+            <h2 class="category-heading">Categories</h2>
+            <div class="category-items">
+                <div class="category-sub-item category-gender">
+                    <a href="#">Gender <img width="15px" height="15px"
+                            src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png"
+                            alt="expand-arrow--v1" /></a>
+                    <ul class="category-sub-item-list category-gender-list">
+                        <li>Men</li>
+                        <li>Women</li>
+                    </ul>
+                </div>
+                <div class="category-sub-item category-sale">
+                    <a href="#">Sale <img width="15px" height="15px"
+                            src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png"
+                            alt="expand-arrow--v1" /></a>
+                    <ul class="category-sub-item-list category-sale-list">
+                        <li>Sport</li>
+                        <li>Luxury</li>
+                    </ul>
+                </div>
+                <div class="category-sub-item category-product">
+                    <a href="#">Product <img width="15px" height="15px"
+                            src="https://img.icons8.com/ios-glyphs/30/expand-arrow--v1.png"
+                            alt="expand-arrow--v1" /></a>
+                    <ul class="category-sub-item-list category-product-list">
+                        <li>Bag</li>
+                        <li>Sweater</li>
+                        <li>Sunglassesw</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <h2>Products</h2>
+            <div class="allProducts">
+                <!-- All the product cards will be appended here.-->
+                
+            </div>
+        </div>
+    </div>
+</main>
+    <div id="footer">
+
+    </div>
+</body>
+<script>
+    $(document).ready(function(){
+
+        $("#header").load("header.html");
+        $("#footer").load("footer.html");
+
+        $(".category-gender > a").click(function(){
+            $(".category-gender-list").slideToggle();
+            $(".category-sale-list").slideUp();
+            $(".category-product-list").slideUp();
+        })
+
+        $(".category-sale > a").click(function(){
+            $(".category-sale-list").slideToggle(1000);
+            $(".category-gender-list").slideUp();
+            $(".category-product-list").slideUp();
+        })
+
+        $(".category-product > a").click(function(){
+            $(".category-product-list").slideToggle();
+            $(".category-gender-list").slideUp();
+            $(".category-sale-list").slideUp();
+        })
+    })
+</script>
+<script src="AllProducts.js"></script>
+</html> 

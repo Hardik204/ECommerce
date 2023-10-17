@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <link rel="stylesheet" href="selectProduct.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+
+    </div>
+
+    <main>
+    <div class="make-flex main">
+        <div class="product-image-div">
+            <img class="product-img" height="500px" />
+        </div>
+        <div class="product-details">
+            <h1 class="product-name">Product Name : </h1>
+            <h3 class="product-price">Product Price : </h3>
+            <h4>What is this product ?</h4>
+            <p class="product-description"></p>
+            <br>
+            <b>Seller : </b>
+            <div class="product-seller"></div>
+            <br>
+            <div class="quantity-selection"><b>Select the quantity : </b><a href="#" type="button" class="quantity-up">↑</a><span class="quantity-value"> 0 </span><a href="#" type="button" class="quantity-down">↓</a></div>
+            <div class="make-flex buy-options">
+                <a type="button" href="#">Buy Now</a>
+                <a type="button" href="#">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+    
+    <h2>Reviews by the Users</h2>
+    <div class="reviews-list">
+
+    </div>
+</main>
+
+    <div id="footer">
+
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $("#header").load("header.html");
+            $("#footer").load("footer.html");
+        })
+    </script>
+</body>
+<script src="selectProduct.js"></script>
+</html>
