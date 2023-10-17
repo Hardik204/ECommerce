@@ -44,6 +44,7 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
     gap: 25px;
+    flex-wrap: wrap;
 }
 
 .review{

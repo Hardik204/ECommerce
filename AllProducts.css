@@ -29,6 +29,7 @@ main{
 
 .category-sub-item > a{
     text-decoration: none;
+    color: grey;
 }
 
 .category-sub-item-list{
@@ -46,6 +47,7 @@ main{
     grid-template-columns: 1fr 1fr 1fr;
     grid-auto-rows: auto;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .card{
@@ -65,4 +67,26 @@ main{
 .card-footer > a{
     text-decoration: none;
     color: #bcbcbc;
+}
+
+.pagination-section{
+    justify-content: flex-end;
+}
+
+
+#nextPage , #previousPage {
+    margin: -8px 20px;
+    background-color: #59ab6e;
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+}
+
+@media (max-width:1350px) {
+    .allProducts{
+        display: inline-grid;
+        grid-template-columns: 1fr fr;
+        grid-auto-rows: auto;
+    }
+    
 }

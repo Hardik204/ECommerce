@@ -1,6 +1,10 @@
+const queryParams = new URLSearchParams(window.location.search);
+const pageIndex = parseInt(queryParams.get('pageIndex'));
+document.querySelector("#pageNumber").textContent = ` ${pageIndex} `;
+
 const url = new URL('https://65280d15931d71583df1ccd0.mockapi.io/ProductsList');
 url.searchParams.append('completed', false); //https://65280d15931d71583df1ccd0.mockapi.io/ProductsList?completed=false
-url.searchParams.append('page', 1); //https://65280d15931d71583df1ccd0.mockapi.io/ProductsList?completed=false&page=1
+url.searchParams.append('page', pageIndex); //https://65280d15931d71583df1ccd0.mockapi.io/ProductsList?completed=false&page=1
 url.searchParams.append('limit', 12); //https://65280d15931d71583df1ccd0.mockapi.io/ProductsList?completed=false&page=1&limit=10
 
 fetch(url, {
@@ -91,3 +95,12 @@ fetch(url, {
         // console.log(typeof card);
         document.querySelector(".allProducts").insertAdjacentHTML("beforeend",card);
     }
+
+
+    document.querySelector("#nextPage").addEventListener("click",function(){
+        window.open("AllProducts.html?pageIndex="+(pageIndex + 1));
+    })
+
+    document.querySelector("#previousPage").addEventListener("click",function(){
+        window.open("AllProducts.html?pageIndex="+(pageIndex - 1));
+    })
